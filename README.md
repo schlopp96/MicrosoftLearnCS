@@ -12,7 +12,7 @@ This is my personal repository containing my progress, class notes, and other in
 
   - They contain further files, called Modules, which then contain individual lessons.
 
-- Modules are most similair to Chapters.
+- Modules are most similar to Chapters.
 
   - These organize the specific chapters that go over in-depth material.
 
