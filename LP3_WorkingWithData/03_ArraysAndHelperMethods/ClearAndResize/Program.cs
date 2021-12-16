@@ -67,7 +67,7 @@ static void Step1()
     string[] pallets = { "B14", "A11", "B12", "A13" };
     Console.WriteLine("");
 
-    Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+    Console.WriteLine($"Clearing 2 spaces...\nNew count: {pallets.Length}");
     Array.Clear(pallets, 0, 2);
 
     int count = 0;
@@ -85,7 +85,7 @@ static void Step2()
 
     Console.WriteLine($"Before: pallets[0] = {pallets[0]}");
 
-    Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+    Console.WriteLine($"Clearing 2 spaces...\nNew count: {pallets.Length}");
     Array.Clear(pallets, 0, 2);
 
     Console.WriteLine($"After: pallets[0] = {pallets[0]}");
@@ -105,7 +105,7 @@ static void Step3()
 
     Console.WriteLine($"Before: pallets[0].ToLower() = {pallets[0].ToLower()}");
 
-    Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+    Console.WriteLine($"Clearing 2 spaces...\n\nNew count: {pallets.Length}");
     Array.Clear(pallets, 0, 2);
 
     if (pallets[0] != null)
@@ -130,7 +130,7 @@ static void Step4()
     string[] pallets = { "B14", "A11", "B12", "A13" };
     Console.WriteLine("");
 
-    Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+    Console.WriteLine($"Clearing 2 spaces...\n\nNew count: {pallets.Length}");
     Array.Clear(pallets, 0, 2);
 
     int count = 0;
@@ -142,7 +142,7 @@ static void Step4()
 
     Console.WriteLine("");
     Array.Resize(ref pallets, 6);
-    Console.WriteLine($"Resizing 6 ... count: {pallets.Length}\npallets[4] = 'C01'\npallets[5] = 'C02'");
+    Console.WriteLine($"Resizing array size to 6 elements ...\nNew count: {pallets.Length}\npallets[4] = 'C01'\npallets[5] = 'C02'");
 
     pallets[4] = "C01";
     pallets[5] = "C02";
@@ -160,7 +160,7 @@ static void Step5()
     Console.WriteLine("");
 
     Array.Clear(pallets, 0, 2);
-    Console.WriteLine($"Clearing 2 ... count: {pallets.Length}");
+    Console.WriteLine($"Clearing 2 spaces...\n\nNew count: {pallets.Length}");
 
     int count = 0;
     foreach (var pallet in pallets)
@@ -171,7 +171,7 @@ static void Step5()
 
     Console.WriteLine("");
     Array.Resize(ref pallets, 6);
-    Console.WriteLine($"Resizing 6 ... count: {pallets.Length}\n\npallets[4] = 'C01'\npallets[5] = 'C02'");
+    Console.WriteLine($"Resizing array size to 6 elements ...\nNew count: {pallets.Length}\n\npallets[4] = 'C01'\npallets[5] = 'C02'");
 
     pallets[4] = "C01";
     pallets[5] = "C02";
@@ -184,7 +184,7 @@ static void Step5()
 
     Console.WriteLine("");
     Array.Resize(ref pallets, 3);
-    Console.WriteLine($"Resizing 3 ... count: {pallets.Length}");
+    Console.WriteLine($"Resizing array size to 3 elements ...\n\nNew count: {pallets.Length}");
 
     count = 0;
     foreach (var pallet in pallets)
