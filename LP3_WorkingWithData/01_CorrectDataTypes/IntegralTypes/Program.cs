@@ -1,18 +1,18 @@
 ﻿/*
-    & Integral Types &
-        * 10/17/21 *
-    ? An integral type is a simple value type that represents whole numbers (non-fractional).
-    ! The most popular in this category is the int data type.
+                            & Integral Types &
+                                * 10/17/21 *
+    >- An integral type is a simple value type that represents whole numbers (non-fractional).
+    >- The most popular in this category is the "int" data type.
 
-    > There are two subcategories of integral types: signed and unsigned integral types.
+    $- There are two subcategories of integral types: signed and unsigned integral types.
 
-& SIGNED Integral Types
-    @ A signed type uses its bytes to represent an equal number of positive and negative numbers.
+                        % SIGNED Integral Types %
+    <- A signed type uses its bytes to represent an equal number of positive and negative numbers.
 
-~ UNSIGNED Integral Types
-    @ An unsigned type uses its bytes to represent only positive numbers.
+                        ~ UNSIGNED Integral Types ~
+    >- An unsigned type uses its bytes to represent only positive numbers.
 
-* Recap *
+                                * Recap *
     @ An integral type is a simple value data type that can hold whole numbers.
     @ There are signed and unsigned data types. Signed integral types use one bit to store whether the value is positive or negative.
     @ You can use the MaxValue and MinValue properties of numeric data types to evaluate whether a number can fit in a given data type.
@@ -26,14 +26,22 @@ namespace IntegralTypes
     {
         static void Main()
         {
-            Console.WriteLine("Integral Types:\n");
-            SignedInts();
-            UnsignedInts();
+
+            Console.WriteLine("Enter the number of which Integral Type you wish to see an example of:\n\n1.) Signed Integral Types\n2.) Unsigned Integral Types");
+            string choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                SignedInts();
+            }
+            else if (choice == "2")
+            {
+                UnsignedInts();
+            }
         }
 
         static void SignedInts()
         {
-            Console.WriteLine("Signed integral types:");
+            Console.WriteLine("\nSigned integral types - Minimum to Maximum Possible Values:\n=============================================================\n");
 
             Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
             Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
@@ -43,8 +51,7 @@ namespace IntegralTypes
 
         private static void UnsignedInts()
         {
-            Console.WriteLine("");
-            Console.WriteLine("Unsigned integral types:");
+            Console.WriteLine("\nUnsigned integral types - Minimum to Maximum Possible Values:\n=============================================================\n");
 
             Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
             Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");

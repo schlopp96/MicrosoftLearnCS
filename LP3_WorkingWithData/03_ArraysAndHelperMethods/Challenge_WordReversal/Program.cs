@@ -25,7 +25,7 @@ $ FINISH WITH THIS CODE:
     & String.Join()
 
 */
-
+using System;
 string pangram = "The quick brown fox jumps over the lazy dog";
 
 string[] words = pangram.Split(' '); //% Breaks down string to am array containing all 9 words.
@@ -34,7 +34,7 @@ for (int i = 0; i < words.Length; i++)
 {
     char[] letters = words[i].ToCharArray(); //< break down each word to its individual letters, and adds resulting chars to array.
     Array.Reverse(letters); // ? REVERSE array of chars from original word 1 by 1
-    pangram_rev[i] = new string(letters); //> Convert each newly reversed char-array to single element in new string array, and repeat for all words.
+    pangram_rev[i] = new string(letters); //> Convert each newly reversed char-array to single string-element in new string array, and repeat for all words.
 }
 
 string result = String.Join(" ", pangram_rev); //< Rejoin all words together by a space: the same character they were split by.
