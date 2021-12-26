@@ -22,7 +22,7 @@ namespace Challenge_CoinFlip
             while (true)
             {
 
-                Console.WriteLine("Please Choose an Example to View:\n\n[1]. Classic If-Else\n[2]. Conditional Operator\n[ANYTHING ELSE]. Exit");
+                Console.WriteLine("\nPlease Choose an Example to View:\n\n[1]. Classic If-Else\n[2]. Conditional Operator\n[ANYTHING ELSE]. Exit");
                 Random Flip = new();
                 int Coin = Flip.Next(0, 2);
                 string userChoice = Console.ReadLine();
@@ -44,6 +44,8 @@ namespace Challenge_CoinFlip
 
                 void ex1()
                 {
+                    Console.WriteLine("\n\nExample 1:\nif (Flip.Next(0, 2) == 0)\n{\n\tConsole.WriteLine('\\nYou rolled a 0: Heads!');\n}\nelse\n{\n\tConsole.WriteLine(\'\\nYou rolled a 1: Tails!');\n}");
+
                     if (Flip.Next(0, 2) == 0)
                     {
                         Console.WriteLine("\nYou rolled a 0: Heads!");
@@ -55,6 +57,7 @@ namespace Challenge_CoinFlip
                 }
                 void ex2()
                 {
+                    Console.WriteLine("\n\nExample 2:\nConsole.Write($\"\\nYou rolled a {coin}: \");\nConsole.WriteLine((Coin == 0) ? \"Heads!\" : \"Tails!\");");
                     Console.Write($"\nYou rolled a {Coin}: ");
                     Console.WriteLine((Coin == 0) ? "Heads!" : "Tails!");
                 }
