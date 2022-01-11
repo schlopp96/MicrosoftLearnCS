@@ -16,19 +16,19 @@
 * - "Logical Negation" refers to the [!] operator.
 * - Adding the [!] operator before a conditional expression checks to ensure the expression is false.
     & Both lines do the same thing below:
-        ^ string pangram = " The quick brown fox jumps over the lazy dog.
+        ^ string pangram = "The quick brown fox jumps over the lazy dog."
         ^ Console.WriteLine(pangram.Contains("fox") == false);
         ^ Console.WriteLine(!pangram.Contains("fox"));
 
 ! RECAP:
-~-There are many different kinds of expressions that evaluate to either true or false.
-~- Evaluate equality using the == operator.
-~- Evaluating equality of strings requires you consider the possibility that the strings have different case and leading or trailing spaces.
-~    - Depending on your situation, use the ToLower() or ToUpper() helper methods, and the Trim() helper method to improve the likelihood that two strings are equal.
-~- Evaluate inequality using the != operator.
+>-There are many different kinds of expressions that evaluate to either true or false.
+<- Evaluate equality using the == operator.
+%- Evaluating equality of strings requires you consider the possibility that the strings have different case and leading or trailing spaces.
+$    - Depending on your situation, use the ToLower() or ToUpper() helper methods, and the Trim() helper method to improve the likelihood that two strings are equal.
+&- Evaluate inequality using the != operator.
 ~- Evaluate greater than, less than and similar operations using comparison operators like >, <, >=, and <=.
-~- If a method returns a bool, it can be used as a Boolean expression.
-~- Use the logical negation operator [!] to evaluate the opposite of a given expression.
+*- If a method returns a bool, it can be used as a Boolean expression.
+?- Use the logical negation operator [!] to evaluate the opposite of a given expression.
 */
 
 
