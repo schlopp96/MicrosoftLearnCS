@@ -20,16 +20,13 @@ namespace UsingIf
     {
         static void Main()
         {
-            // Random dice = new Random();
             Random dice = new(); // Creates a new class instance when called.
 
             int roll1 = dice.Next(1, 7);
             int roll2 = dice.Next(1, 7);
             int roll3 = dice.Next(1, 7);
-
-            int total = roll1 + roll2 + roll3;
-
-            Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+            int DiceTotal = roll1 + roll2 + roll3;
+            Console.WriteLine($"\n______________\n| Dice roll: |\n| Die 1 -> {roll1} |\n| Die 2 -> {roll2} |\n| Die 3 -> {roll3} |\n--------------\nTotal: {DiceTotal} points.");
 
             //* Using nesting, the user will no longer receive both a double AND triple bonus.
             if (roll1 == roll2 || roll1 == roll3 || roll2 == roll3)
@@ -37,31 +34,31 @@ namespace UsingIf
                 //^ Rule 2.
                 if ((roll1 == roll2) && (roll1 == roll3))
                 {
-                    total += 6;
+                    DiceTotal += 6;
                     Console.WriteLine("\nWOW, TRIPLES!!! +6 Bonus Points!");
                 }
                 //^ Rule 1
                 else
                 {
-                    total += 2;
+                    DiceTotal += 2;
                     Console.WriteLine("\nNice, you got doubles! +2 Bonus Points!");
                 }
             }
             //^ Rule 3.
-            if (total >= 16)
+            if (DiceTotal >= 16)
             {
                 Console.WriteLine("\nCongratulations!! You win a BRAND NEW SMART CAR!! Good luck not drowning in pussy!");
                 Console.WriteLine("\nPress anything to exit.");
                 Console.ReadKey(true);
             }
-            else if (total > 10 && total < 16)
+            else if (DiceTotal > 10 && DiceTotal < 16)
             {
-                Console.WriteLine("\nOkay nice job!! You win a new LAPTOP!");
+                Console.WriteLine("\nOkay nice job!! You win a new Terry Crews replicated DILDO!!!\nGood luck getting that outta there...!");
                 Console.WriteLine("\nPress anything to exit.");
                 Console.ReadKey(true);
 
             }
-            else if (total == 7)
+            else if (DiceTotal == 7)
             {
                 Console.WriteLine("\nHey, alright nice! Lucky number seven! You win this gently-used roll of TOILET PAPER!");
                 Console.WriteLine("\nPress anything to exit.");
@@ -70,7 +67,7 @@ namespace UsingIf
             }
             else
             {
-                Console.WriteLine("\nSuprise!! Way to go dumbfuck, you lost. Here, take this trash out too while you're leaving, loser.");
+                Console.WriteLine("\nSuprise!!!!\nWay to go dumbfuck, you lost.\nHere, take this trash out too while you're leaving, loser.");
                 Console.WriteLine("\nPress anything to take out the trash and exit.");
                 Console.ReadKey(true);
             }
