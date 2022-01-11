@@ -1,6 +1,7 @@
 ﻿/*
         % Word Reversal Challenge %
             @ 12/4/21 @
+        > Edited: 1/10/21 <
 
 $ Write the code necessary to:
     > reverse the letters of each word in place and display the result.
@@ -25,17 +26,24 @@ $ FINISH WITH THIS CODE:
     & String.Join()
 
 */
-using System;
 string pangram = "The quick brown fox jumps over the lazy dog";
 
-string[] words = pangram.Split(' '); //% Breaks down string to an array containing all 9 words.
-string[] pangram_rev = new string[pangram.Length]; //* Create empty array with exact number of string placeholders as words in pangram for final output.
-for (int i = 0; i < words.Length; i++)
+static string StringReverse(string val)
 {
-    char[] letters = words[i].ToCharArray(); //< break down each word to its individual letters, and adds resulting chars to array.
-    Array.Reverse(letters); // ? REVERSE array of chars from original word 1 by 1
-    pangram_rev[i] = new string(letters); //> Convert each newly reversed char-array back to words in new string array, and repeat for all words.
+
+    string[] words = val.Split(' '); //% Split string by whitespace and set to array containing all 9 words.
+    string[] val_rev = new string[val.Length]; //* Create empty array with exact size as number of words within pangram for final output.
+
+    //> Iterate through string elements...
+    for (int i = 0; i < words.Length; i++)
+    {
+        char[] letters = words[i].ToCharArray(); //< Assign each string element to own char array, breaking down element to individual chars.
+        Array.Reverse(letters); // ? REVERSE array of chars from original word 1 by 1
+        val_rev[i] = new string(letters); //> Convert each newly reversed char element back to word strings.
+    }
+
+    string result = string.Join(" ", val_rev); //< Rejoin all words together by a single space into an array.
+    return result.TrimEnd();
 }
 
-string result = String.Join(" ", pangram_rev); //< Rejoin all words together by a space: the same character they were split by.
-Console.WriteLine(result);
+Console.Write($"OG String:\n> \"{pangram}\"\n\nReversed String\n> \"{StringReverse(pangram)}\"");
