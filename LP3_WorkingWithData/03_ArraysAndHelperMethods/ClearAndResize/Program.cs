@@ -30,37 +30,48 @@ static void main()
         {
             Console.WriteLine("=====================================================\nArray: {\"B14\", \"A11\", \"B12\", \"A13\"}\n");
             Step1();
+            Console.WriteLine("\nPress anything to continue...\n");
+            Console.ReadKey(true);
         }
         else if (uchoice == "2")
         {
             Console.WriteLine("=====================================================\nArray: {\"B14\", \"A11\", \"B12\", \"A13\"}\n");
             Step2();
+            Console.WriteLine("\nPress anything to continue...\n");
+            Console.ReadKey(true);
         }
         else if (uchoice == "3")
         {
             Console.WriteLine("=====================================================\nArray: {\"B14\", \"A11\", \"B12\", \"A13\"}\n");
             Step3();
+            Console.WriteLine("\nPress anything to continue...\n");
+            Console.ReadKey(true);
         }
         else if (uchoice == "4")
         {
             Console.WriteLine("=====================================================\nArray: {\"B14\", \"A11\", \"B12\", \"A13\"}\n");
             Step4();
+            Console.WriteLine("\nPress anything to continue...\n");
+            Console.ReadKey(true);
         }
 
         else if (uchoice == "5")
         {
             Console.WriteLine("=====================================================\nArray: {\"B14\", \"A11\", \"B12\", \"A13\"}\n");
             Step5();
+            Console.WriteLine("\nPress anything to continue...\n");
+            Console.ReadKey(true);
         }
         else if (uchoice is "exit" or "ex" or "Exit")
         {
-            Console.WriteLine("Exiting...");
+            Console.WriteLine("\nExiting...");
             Thread.Sleep(750);
             break;
         }
         else
         {
             Console.WriteLine($"\n\nInvalid Input:\n\"{uchoice}\"\nMust only enter the number of step to run, or \"exit\".\n");
+            Thread.Sleep(1500);
         }
     }
 }
@@ -113,7 +124,7 @@ static void Step3()
 
     if (pallets[0] != null)
     {   //< Without this expresion, program would crash due to attempt to call ToLower() on contents of pallets[0] element before Compiler has a chance to implicitly convert null to empty string..
-        Console.WriteLine($"\nAfter: pallets[0].ToLower() = \"{pallets[0].ToLower()}\"\n");
+        Console.WriteLine($"\nAfter: pallets[0].ToLower() = \"{pallets[0].ToLower()} \"\n");
     }
     else
     {
@@ -145,7 +156,7 @@ static void Step4()
 
 
     Array.Resize(ref pallets, 6);
-    Console.WriteLine($"\nResizing array size to 6 elements ...\nNew count: {pallets.Length}\n\npallets[4] = 'C01'\npallets[5] = 'C02'\n");
+    Console.WriteLine($"\nResizing array size to 6 elements ...\nNew count: {pallets.Length}\n\nAssigning pallets[4] to = 'C01'\nAssigning pallets[5] to = 'C02'\n");
 
     pallets[4] = "C01";
     pallets[5] = "C02";
@@ -174,7 +185,7 @@ static void Step5()
 
 
     Array.Resize(ref pallets, 6);
-    Console.WriteLine($"\nResizing array size to 6 elements ...\nNew count: {pallets.Length}\n\npallets[4] = 'C01'\npallets[5] = 'C02'\n");
+    Console.WriteLine($"\nResizing array size to 6 elements ...\nNew count: {pallets.Length}\n\nAssigning pallets[4] to = 'C01'\nAssigning pallets[5] to = 'C02'\n");
 
     pallets[4] = "C01";
     pallets[5] = "C02";

@@ -33,8 +33,8 @@ namespace Vars_Literals
             name = "Schlopp";
             Console.WriteLine(name);
             // Implicitly-typed variables:
-            var message = "Hello there!"; // LOOK: The [var] keyword tells compiler to infer Var type based on the value initialized to.
-            Console.WriteLine(message); // `message` is typed as a string by the compiler, and can no longer be changed.
+            var message = "Hello there!"; //< LOOK: The [var] keyword tells compiler to infer variable type based on the value initialized to.
+            Console.WriteLine(message); //$ `message` is typed as a string by the compiler, and can no longer be changed.
         }
     }
 }
