@@ -1,6 +1,8 @@
 ﻿/*
                     % CHALLENGE %
                 * Started: 2/12/22 *
+                ! Finished: 2/12/22 !
+
 < At the beginning of this module, we described the scenario of working for a marketing department of a financial services company.
 >To promote the company's newest investment products, we'll send thousands of personalized letters to our company's existing clients.
 @ Our job is to write C# code that will merge personalized information about the customer.
@@ -44,11 +46,13 @@ decimal newReturn = 0.13125m;
 decimal newProfit = 63000000.0m;
 
 //-> Your logic here
+string message = $"Dear {customerName},\nAs a customer of our {currentProduct} offering we are exited to tell you about a new financial product that would dramatically increase your return.\n\nCurrently you own {currentShares:n2} shares at a return of {currentReturn:p2}.\n\nOur new product, {newProduct} offers a return of {newReturn:p2}.  Given your current volume, your potential profit would be {newProfit:C}.\n\n";
+Console.Write(message);
+
+//-> Your logic here:
 
 Console.WriteLine("Here's a quick comparison:\n");
 
-string comparisonMessage = "";
-
-//-> Your logic here
+string comparisonMessage = $"{currentProduct,-8}         {currentReturn:p2}   {currentProfit:C}\n{newProduct,-4}     {newReturn:p2}   {newProfit:C}";
 
 Console.WriteLine(comparisonMessage);
