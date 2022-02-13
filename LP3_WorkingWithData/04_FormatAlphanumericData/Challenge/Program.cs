@@ -1,5 +1,6 @@
 ﻿/*
                     % CHALLENGE %
+                * Started: 2/12/22 *
 < At the beginning of this module, we described the scenario of working for a marketing department of a financial services company.
 >To promote the company's newest investment products, we'll send thousands of personalized letters to our company's existing clients.
 @ Our job is to write C# code that will merge personalized information about the customer.
@@ -7,7 +8,7 @@
     !- Existing portfolio
     $- Will compare their current returns to projected returns if they were to invest in using our new products.
 
-*Our writers have decided on the following example marketing copy. Here's the desired output (using fictitious customer account data):
+* Our writers have decided on the following example marketing copy. Here's the desired output (using fictitious customer account data):
 
         > Dear Mr. Jones,
         > As a customer of our Magic Yield offering we are excited to tell you about a new financial product that would dramatically increase your return.
