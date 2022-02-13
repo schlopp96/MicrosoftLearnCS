@@ -2,6 +2,7 @@
 >           String Formatting Basics
 <               Started: 1/16/22
 <               Finished: 2/1/22
+>             Last Edited: 2/12/22
 
 ^ - In this unit, we'll learn how to format strings to display this information accurately and more succinctly than string concatenation.
 
@@ -63,40 +64,40 @@ $            Console.WriteLine($"Measurement - {measurement:N4} units.")
 
 static void CompositeFormattingEX()
 {
-    Console.Write("\nPlease enter first name:\n> ");
+    Console.Write("\nPlease enter first name:\n=> ");
     string? fname = Console.ReadLine();
 
-    Console.Write("Please enter last name:\n> ");
+    Console.Write("\nPlease enter last name:\n=> ");
     string? lname = Console.ReadLine();
 
 
-    Console.WriteLine("\n{1}, {0}!", fname, lname);
+    Console.WriteLine("\nWelcome, esteemed Lord {0} of the {1} fortune!", char.ToUpper(fname![0]) + fname[1..], char.ToUpper(lname![0]) + lname[1..]);
 }
 
 static void StringInterpolationEX()
 {
-    Console.Write("Please enter first name:\n> ");
+    Console.Write("\nPlease enter first name:\n=> ");
     string? fname = Console.ReadLine();
 
-    Console.Write("Please enter last name:\n> ");
+    Console.Write("\nPlease enter last name:\n=> ");
     string? lname = Console.ReadLine();
 
-    Console.WriteLine($"\n{fname} {lname}!", fname, lname);
+    Console.WriteLine($"\nAhh! Mr. {lname}! Long cock no see, my good friend \"Needle-Dick-{fname}\"!", char.ToUpper(fname![0]) + fname[1..], char.ToUpper(lname![0]) + lname[1..]);
 }
 
 static void FormattingCurrencyEX()
 {
     while (true)
     {
-        Console.Write("Please enter a price:\n> ");
+        Console.Write("\nPlease enter a price:\n=> ");
         string? price = Console.ReadLine();
         int discount = 50;
         if (decimal.TryParse(price, out decimal finalPrice))
         {
-            Console.WriteLine($"\nPre-total: {(finalPrice + 50):C}\nDiscount: -{discount:C}\nFinal Price: {finalPrice:C}");
+            Console.WriteLine($"\nPre-total: {finalPrice:C}\nDiscount: -{discount:C}\nFinal Price: {finalPrice - 50:C}");
             break;
         }
-        else { Console.WriteLine("\nNOPE!!\n\nYA FUCKED UP, RETARD!!\n"); }
+        else { Console.WriteLine($"\nNOPE!! The fuck is \"{price}\"???\n\nYA FUCKED UP, RETARD!!\n"); }
     }
 }
 
@@ -104,14 +105,14 @@ static void FormattingNumbersEX()
 {
     while (true)
     {
-        Console.Write("Please enter a number:\n> ");
+        Console.Write("\nPlease enter a number:\n=> ");
         string? measurement = Console.ReadLine();
         if (decimal.TryParse(measurement, out decimal final))
         {
             Console.WriteLine($"\nMeasurement: {final:N4} units.");
             break;
         }
-        else { Console.WriteLine("\nNOPE!!\n\nYA FUCKED UP, RETARD!!\n"); }
+        else { Console.WriteLine($"\nNOPE!! The fuck is \"{measurement}\"???\n\nYA FUCKED UP, RETARD!!\n"); }
     }
 }
 
@@ -119,14 +120,14 @@ static void FormattingPercentagesEX()
 {
     while (true)
     {
-        Console.Write("Please enter a percentage with atleast 2 decimal places.\nEx: 0.44\n> ");
+        Console.Write("\nPlease enter a percentage with atleast 2 decimal places.\nEx: 0.44\n=> ");
         string? inp = Console.ReadLine();
         if (decimal.TryParse(inp, out decimal percentage))
         {
             Console.WriteLine($"\nTax rate: {percentage:P4}");
             break;
         }
-        else { Console.WriteLine("\nNOPE!!\n\nYA FUCKED UP, RETARD!!\n"); }
+        else { Console.WriteLine($"\nNOPE!! The fuck is \"{inp}\"???\n\nYA FUCKED UP, RETARD!!\n"); }
     }
 }
 
@@ -134,7 +135,7 @@ static void ChooseEX()
 {
     while (true)
     {
-        Console.Write("\nWhich string formatting example would you like to see?\n\n1.) Composite Formatting\n2.) String Interpolation\n3.) Currency Formatting\n4.) Number Formatting\n5.) Percentage Formatting\n6.) Exit\n> ");
+        Console.Write("\nWhich string formatting example would you like to see?\n\n1.) Composite Formatting\n2.) String Interpolation\n3.) Currency Formatting\n4.) Number Formatting\n5.) Percentage Formatting\n6.) Exit\n=> ");
         string? uChoice = Console.ReadLine();
         if (uChoice == "1")
         {
@@ -158,12 +159,13 @@ static void ChooseEX()
         }
         else if (uChoice == "6")
         {
-            Console.WriteLine("\nExiting...");
+            Console.WriteLine("\nExiting Program...");
             break;
         }
         else
         {
-            Console.WriteLine($"\nERROR:\n\"{uChoice}\" not a valid entry.\nMust only enter (without quotes) numbers between \"1\" - \"6\".\n");
+            Console.WriteLine($"\n!! INPUT ERROR: !!\n\"{uChoice}\" not a valid entry.\nMust only enter (without quotes) numbers between \"1\" - \"6\".\n\nPress [ENTER] to continue.\n");
+            Console.ReadKey(false);
         }
     }
 }
