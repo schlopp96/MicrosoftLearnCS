@@ -2,9 +2,9 @@
                             ^ Using String-Helper-Methods IndexOf() & Substring() ^
 
 ? In this exercise, you'll use the IndexOf() method and its variants including:
-?    IndexOfAny()
-?    LastIndexOf()
-? to locate the position of one character or string inside a larger string.
+&    IndexOf()
+%    LastIndexOf()
+~ to locate the position of one character or string inside a larger string.
 
 < Once we've located the position, we can use the Substring() method to return the rest of the string after the position.
 
