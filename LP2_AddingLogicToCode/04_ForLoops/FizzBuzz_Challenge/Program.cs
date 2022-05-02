@@ -24,12 +24,36 @@ namespace FizzBuzz_Challenge
     {
         static void Main()
         {
-            for (int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 1000; i++)
             {
-                if ((i % 3 == 0) && (i % 5 == 0)) Console.WriteLine($"{i} FizzBuzz");
-                else if (i % 3 == 0) Console.WriteLine($"{i} Fizz");
-                else if (i % 5 == 0) Console.WriteLine($"{i} Buzz");
-                else Console.WriteLine(i);
+                if (i < 10) // Enforce spacing between i and FizzBuzz.
+                {
+                    if ((i % 3 == 0) && (i % 5 == 0)) Console.WriteLine($"{i}    FizzBuzz");
+                    else if (i % 3 == 0) Console.WriteLine($"{i}    Fizz");
+                    else if (i % 5 == 0) Console.WriteLine($"{i}    Buzz");
+                    else Console.WriteLine(i);
+                }
+                else if (i >= 100 && i < 1000)
+                {
+                    if ((i % 3 == 0) && (i % 5 == 0)) Console.WriteLine($"{i}  FizzBuzz");
+                    else if (i % 3 == 0) Console.WriteLine($"{i}  Fizz");
+                    else if (i % 5 == 0) Console.WriteLine($"{i}  Buzz");
+                    else Console.WriteLine(i);
+                }
+                else if (i == 1000)
+                {
+                    if ((i % 3 == 0) && (i % 5 == 0)) Console.WriteLine($"{i} FizzBuzz");
+                    else if (i % 3 == 0) Console.WriteLine($"{i} Fizz");
+                    else if (i % 5 == 0) Console.WriteLine($"{i} Buzz");
+                    else Console.WriteLine(i);
+                }
+                else
+                {
+                    if ((i % 3 == 0) && (i % 5 == 0)) Console.WriteLine($"{i}   FizzBuzz");
+                    else if (i % 3 == 0) Console.WriteLine($"{i}   Fizz");
+                    else if (i % 5 == 0) Console.WriteLine($"{i}   Buzz");
+                    else Console.WriteLine(i);
+                }
             }
         }
     }
