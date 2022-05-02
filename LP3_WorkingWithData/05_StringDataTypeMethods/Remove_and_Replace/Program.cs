@@ -17,7 +17,7 @@ $       - The next 20 digits contain a customer's name.
 @       Replace()
 <You would use the Replace() method when you must replace one or more characters with a different character (or no character).
 
-? The Replace() method is different from the other methods we've used so far inasmuch as it will replace every instance of the given characters, not just the first or last instance.
+? The Replace() method is different from the other methods we've used so far as it will replace every instance of the given characters, not just the first or last instances.
 
 *       Recap
 < Here's the most important things to remember from this unit:
@@ -26,21 +26,31 @@ $       - The next 20 digits contain a customer's name.
 $ The Replace() method swaps all instances of a string with a new string.
 
 */
+/*
+@       -The first five digits represent a customer identification number.
+$       - The next 20 digits contain a customer's name.
+%       - The next six positions represent the customer's latest invoice amount
+&       - The last three positions represent the number of items ordered on that invoice.
+*/
+
 
 static void Ex_Remove()
 {
     string data = "12345John Smith          5000  3  ";
-    string updatedData = data.Remove(5, 20);
-    Console.WriteLine(updatedData);
+    Console.WriteLine($"Starting Data:\n\n>> {data}");
+
+    string updatedData = data.Remove(5, 20); // Remove ID number & customer name.
+    Console.WriteLine($"\nExtracted invoice number & items ordered:\n\n>> {updatedData}\n"); // Output invoice amount & number of items ordered.
 
 }
 
 static void Ex_Replace()
 {
     string message = "This--is--ex-amp-le--da-ta";
-    message = message.Replace("--", " ");
-    message = message.Replace("-", "");
-    Console.WriteLine(message);
+    Console.WriteLine($"Starting Data:\n\n>> {message}");
+    message = message.Replace("--", " "); // Replace "--" with a space.
+    message = message.Replace("-", ""); // Replace "-" with a space.
+    Console.WriteLine($"\nReplaced \"--\" and \"-\" characters with spaces:\n\n>> {message}\n");
 }
 
 static void main()
