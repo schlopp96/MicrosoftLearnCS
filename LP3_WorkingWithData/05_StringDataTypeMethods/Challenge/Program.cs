@@ -50,6 +50,9 @@ static void challenge()
 
     Console.WriteLine(quantity);
     Console.WriteLine(output);
+    
+    Console.WriteLine("Press any key to exit.");
+    Console.ReadKey(true);
 }
 
 challenge();

@@ -21,7 +21,7 @@ namespace Do_DoWhile_Continue
     {
         static void Main()
         {
-            Console.Write("Please enter which example to run:\n[1]. BreakOnNumber()\n[2]. BreakOnLessThan()\n[3]. UsingContinue()\n> ");
+            Console.Write("Please enter which example to run:\n[1]. BreakOnNumber() - Loop breaks on number 7\n[2]. BreakOnLessThan() - Loop breaks on number <3\n[3]. UsingContinue() - Nothing greater than 7 is printed\n> ");
             string userChoice = Console.ReadLine();
             switch (userChoice)
             {
