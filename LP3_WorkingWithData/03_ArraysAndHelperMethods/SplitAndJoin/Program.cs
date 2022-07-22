@@ -75,7 +75,7 @@ static void Steps3And4()
     Console.WriteLine(result);
 
     // @ Step 4
-    Console.WriteLine("\nFinally, let's use the Split() method available to variables of type string to create an array of strings.\nWe'll use the comma as the delimiter to split one long string into smaller strings.\nFinally, we'll loop through each element of the new array of string.\n\nstring[] items = result.Split('\n');\nforeach (string item in items)\n{\n\tConsole.WriteLine(item);\n}\n\nOutput:");
+    Console.WriteLine("\nFinally, let's use the Split() method available to variables of type string to create an array of strings.\nWe'll use the comma as the delimiter to split one long string into smaller strings.\nFinally, we'll loop through each element of the new array of string.\n\nstring[] items = result.Split('\nabc123');\nforeach (string item in items)\n{\n\tConsole.WriteLine(item);\n}\n\nOutput:");
 
     string[] items = result.Split(',');
     foreach (string item in items)
