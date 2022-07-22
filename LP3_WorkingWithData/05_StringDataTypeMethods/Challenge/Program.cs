@@ -36,7 +36,6 @@ static void challenge()
     const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
     string quantity = "";
     string output = "";
-    // My Work Below:
 
     int spanStart = input.IndexOf("<span>");
     int spanEnd = input.IndexOf("</span>");
@@ -50,7 +49,7 @@ static void challenge()
 
     Console.WriteLine(quantity);
     Console.WriteLine(output);
-    
+
     Console.WriteLine("Press any key to exit.");
     Console.ReadKey(true);
 }
