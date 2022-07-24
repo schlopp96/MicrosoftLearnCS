@@ -144,27 +144,27 @@ namespace LoggingAndTracing
                         case 1:
                             OutputTypes.WriteLineEx();
                             Console.WriteLine("\nPress anything to continue...\n");
-                            Console.ReadKey(false);
+                            Console.ReadKey(true);
                             continue;
                         case 2:
                             OutputTypes.TraceEx();
                             Console.WriteLine("\nPress anything to continue...\n");
-                            Console.ReadKey(false);
+                            Console.ReadKey(true);
                             continue;
                         case 3:
                             OutputTypes.DebugEx();
                             Console.WriteLine("\nPress anything to continue...\n");
-                            Console.ReadKey(false);
+                            Console.ReadKey(true);
                             continue;
                         case 4:
                             ConditionalTracing.ConditionalEx();
                             Console.WriteLine("\nPress anything to continue...\n");
-                            Console.ReadKey(false);
+                            Console.ReadKey(true);
                             continue;
                         case 5:
                             Assertions.IntegerDivide(10, 2);
                             Console.WriteLine("\nPress anything to continue...\n");
-                            Console.ReadKey(false);
+                            Console.ReadKey(true);
                             continue;
                         case 6:
                             Console.Write("Exiting...");
