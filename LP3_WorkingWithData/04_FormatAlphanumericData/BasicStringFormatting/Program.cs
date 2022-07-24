@@ -82,7 +82,7 @@ static void StringInterpolationEX()
     Console.Write("\nPlease enter last name:\n=> ");
     string? lname = Console.ReadLine();
 
-    Console.WriteLine($"\nAhh! Mr. {lname}! Long cock no see, my good friend \"Needle-Dick-{fname}\"!", char.ToUpper(fname![0]) + fname[1..], char.ToUpper(lname![0]) + lname[1..]);
+    Console.WriteLine("\nAhh! Mr. {lname}! Long cock no see, my good friend \"Needle-Dick-{fname}\"!", char.ToUpper(fname![0]) + fname[1..], char.ToUpper(lname![0]) + lname[1..]);
 }
 
 static void FormattingCurrencyEX()
