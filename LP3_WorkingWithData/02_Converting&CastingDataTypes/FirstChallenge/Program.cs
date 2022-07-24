@@ -19,6 +19,11 @@
                 > Total: 68.3
 
 */
+
+/// <summary>
+/// It loops through an array of strings, and if the string can be converted to a decimal, it adds it to
+/// the total, otherwise it adds it to the message
+/// </summary>
 static void FirstChallenge()
 {
 
