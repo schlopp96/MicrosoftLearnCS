@@ -34,14 +34,17 @@
 ~   2. You may not delete any of the existing code except for the comments.
 */
 
-string customerName = "Mr. Jones";
+Console.Write("Enter name of letter recipient:\n> ");
+string customerName = Console.ReadLine();
 
-string currentProduct = "Magic Yield";
+Console.Write("Enter name of old product:\n> ");
+string currentProduct = Console.ReadLine();
 int currentShares = 2975000;
 decimal currentReturn = 0.1275m;
 decimal currentProfit = 55000000.0m;
 
-string newProduct = "Glorious Future";
+Console.Write("Enter name of new product:\n> ");
+string newProduct = Console.ReadLine();
 decimal newReturn = 0.13125m;
 decimal newProfit = 63000000.0m;
 
